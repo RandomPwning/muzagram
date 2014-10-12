@@ -1,9 +1,14 @@
 Muzagram::Application.routes.draw do
+
   resources :users
 
   resources :tests
 
+
   resources :statuses
+
+  resources :roles
+
 
 
   resources :customers
