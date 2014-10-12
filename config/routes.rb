@@ -3,6 +3,9 @@ Muzagram::Application.routes.draw do
 
   resources :tests
 
+  resources :statuses
+
+
   resources :customers
 
   # The priority is based upon order of creation:
