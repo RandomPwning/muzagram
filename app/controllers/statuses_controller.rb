@@ -2,15 +2,11 @@ class StatusesController < ApplicationController
   # GET /statuses
   # GET /statuses.json
   def index
-
-    @statuses = Status.where(user_id: params[:id])
-     if @stasuses.nil?
-        @statuses = []
-      end
+    @statuses = Status.all
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @statuses}
+      format.json { render json: @statuses }
     end
   end
 

@@ -7,14 +7,6 @@ Muzagram::Application.routes.draw do
   resources :customers
 
 
-match '/users/:user_id/statuses' => 'statuses#index'
-
-	namespace :users do
-		# match
-		# resources :statuses
-		# resources :users
-	end
-
   namespace :admin do
     resources :users
     resources :statuses
