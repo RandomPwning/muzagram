@@ -5,4 +5,9 @@ class User
   field :gender, type: String
   field :email, type: String
   field :password, type: String
+
+
+
+
+  has_many :statuses
 end

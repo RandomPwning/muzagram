@@ -1,17 +1,30 @@
 Muzagram::Application.routes.draw do
 
   resources :users
-
   resources :tests
-
-
   resources :statuses
-
   resources :roles
-
-
-
   resources :customers
+
+
+match '/users/:user_id/statuses' => 'statuses#index'
+
+	namespace :users do
+		# match
+		# resources :statuses
+		# resources :users
+	end
+
+  namespace :admin do
+    resources :users
+    resources :statuses
+    resources :roles
+  end
+	namespace :my_account do
+	 	resource :users
+		resources :users
+		resources :statuses
+	end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
