@@ -8,4 +8,5 @@ class Status
 
   belongs_to :user
 
+  field :user_id, type: String
 end
